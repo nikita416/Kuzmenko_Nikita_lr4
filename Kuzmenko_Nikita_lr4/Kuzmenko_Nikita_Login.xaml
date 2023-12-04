@@ -1,0 +1,37 @@
+﻿<Window x:Class="Kuzmenko_Nikita_lr4.Kuzmenko_Nikita_Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kuzmenko_Nikita_lr4"
+        mc:Ignorable="d"
+        Background="#2C3E50"
+        Title="Kuzmenko_Nikita_Login" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Авторизація" FontSize="40px" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                   Foreground="White" Margin="10,0,556,0" />
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Name="LoginField" Height="30" VerticalAlignment="Center" Margin="0,0,535,6"/>
+            <PasswordBox Grid.Row="1" Name="PasswordField" Height="31" VerticalAlignment="Center" Margin="0,11,535,0"/>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,409,0">
+            <Button Background="#3498db" Content="Очистити" Click="CleanFields_Clicked" Height="50" Margin="10" Width="174"/>
+            <Button Background="#2ecc71" Content="Увійти" Click="Login_Clicked" MouseEnter="Login_MouseEnter" MouseLeave="Login_MouseLeave" Height="50" Margin="10" Width="169"/>
+        </StackPanel>
+    </Grid>
+</Window>
